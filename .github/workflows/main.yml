@@ -20,11 +20,11 @@ jobs:
           java-version: '17'
           cache: 'maven'
 
-      - name: 🔧 Verify Checkstyle
+      - name: Verify Checkstyle
         run: mvn checkstyle:checkstyle
 
-      - name: 🧹 Verify PMD
+      - name: Verify PMD
         run: mvn pmd:check
 
-      - name: 🐛 Verify SpotBugs
+      - name: Verify SpotBugs
         run: mvn spotbugs:check
