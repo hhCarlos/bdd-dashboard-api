@@ -12,5 +12,7 @@ Checkstyle: mvn checkstyle:checkstyle
 PMD: mvn pmd:check
 SpotBugs: mvn spotbugs:check
 
+Verificar de manera local: mvn verify
+
 Date: Viernes 7 2025
 Branch: ci/workflows
