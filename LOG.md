@@ -9,6 +9,8 @@ Branch: feat/init-check-ep
 Se agrega los plugins de checkstyle y spotbugs.
 
 Checkstyle: mvn checkstyle:checkstyle
+PMD: mvn pmd:check
+SpotBugs: mvn spotbugs:check
 
 Date: Viernes 7 2025
 Branch: ci/workflows
