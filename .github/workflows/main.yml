@@ -1,33 +1,25 @@
-name: CI - Workflows
+name: CI - Orchestrator
 
 on:
   push:
     branches:
       - develop
       - ci/**
+  pull_request:
+
 jobs:
-  quality-checks:
-    runs-on: ubuntu-latest
+  checkstyle:
+    uses: ./.github/workflows/checkstyle.yml
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+  pmd:
+    uses: ./.github/workflows/pmd.yml
 
-      - name: Setup Java 17
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-          cache: 'maven'
+  spotbugs:
+    uses: ./.github/workflows/spotbugs.yml
 
-      - name: Verify Checkstyle
-        run: mvn checkstyle:checkstyle
-
-      - name: Verify PMD
-        run: mvn pmd:check
-
-      - name: Verify SpotBugs
-        run: mvn spotbugs:check
-
-      - name: Run Unit Testing
-        run: mvn test
+  unit-test:
+    uses: ./.github/workflows/unit-test.yml
+    needs:
+      - checkstyle
+      - pmd
+      - spotbugs
