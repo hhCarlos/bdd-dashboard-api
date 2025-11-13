@@ -16,3 +16,9 @@ Verificar de manera local: mvn verify
 
 Date: Viernes 7 2025
 Branch: ci/workflows
+
+## 3. Comentarios en controladores
+Se genera la documentacion a traves de el comendo: mvn javadoc:javadoc
+
+Date: Jueves 13 Noviembre 2025
+Branch: feat/javadoc-init
