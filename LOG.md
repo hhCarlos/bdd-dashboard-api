@@ -22,3 +22,9 @@ Se genera la documentacion a traves de el comendo: mvn javadoc:javadoc
 
 Date: Jueves 13 Noviembre 2025
 Branch: feat/javadoc-init
+
+## 4. EP: Usuarios
+Se genera el EP para los usuarios y su registro
+
+Date: Jueves 13 Noviembre 2025
+Branch: feat/users-ep
