@@ -28,3 +28,10 @@ Se genera el EP para los usuarios y su registro
 
 Date: Jueves 13 Noviembre 2025
 Branch: feat/users-ep
+
+## 5. Integracion de Docker
+Se generan dos bases de datos a traves de docker, se genera un archivo el cual contiene los comandos
+para crear una base de datos relacional(mysql) y no  relacional(mongodb).
+
+Date: -
+Branch: feat/docker-init
